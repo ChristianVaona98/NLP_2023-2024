@@ -1,4 +1,4 @@
-# NLP_2023-2024
+# First Assignment
 # Wikipedia Text Classifier
 
 ## Overview
