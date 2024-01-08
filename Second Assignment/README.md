@@ -53,13 +53,14 @@ from nltk.tokenize import word_tokenize
 
 # ... (Include the provided functions here)
 
-# Example usage:
-input_text = """Your input text goes here."""
-
-slices = generate_slices(input_text)
-
-for i, slice_text in enumerate(slices):
-    print(f"Original Slice {i + 1}:", slice_text)
+if __name__ == "__main__":
+    # Example usage:
+    input_text = """Your input text goes here."""
+    
+    slices = generate_slices(input_text)
+    
+    for i, slice_text in enumerate(slices):
+        print(f"Original Slice {i + 1}:", slice_text)
 ```
 
 ## Important Notes
