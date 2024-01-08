@@ -30,7 +30,7 @@ This function compares two slices based on cosine distance after vectorization. 
 - **Returns:**
   - `True` if slices are different enough, `False` otherwise.
 
-### `generate_slices(input_text, context_window_size=128, slice_threshold=0.20)`
+### `generate_slices(user_input_text, context_window_size=None, slice_threshold=None)`
 
 This main function generates slices for the input text based on the specified criteria. It utilizes the `preprocess_text` function for text preprocessing and `are_slices_different_enough` for comparing slices.
 
