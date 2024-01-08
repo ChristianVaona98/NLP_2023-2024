@@ -65,20 +65,21 @@ def generate_slices(input_text, context_window_size=128, slice_threshold=0.20):
         start += context_window_size // 2
 
     return original_slices
-
-# Example usage:
-input_text = """
-The quick brown fox jumps over the lazy dog. This is a test sentence for the language model. It demonstrates how the program handles short and simple input texts. The goal is to generate meaningful slices that cover the entire input length. Each slice should be diverse enough from the others based on the specified cosine distance threshold.
-
-Programming is the art of telling a computer what to do through a set of instructions. It involves logic, problem-solving, and creativity. Writing code allows us to create software that can automate tasks, process data, and perform various functions. Learning to program opens up a world of possibilities in the field of technology.
-
-Artificial Intelligence is a rapidly advancing field that aims to create machines capable of intelligent behavior. Machine learning, a subset of AI, enables computers to learn from data and improve their performance over time. Large Language Models, like ChatGPT, are examples of AI applications that can understand and generate human-like text.
-
-The internet has transformed the way we access information and communicate. It connects people globally, facilitates online collaboration, and provides a platform for sharing ideas. With the rise of social media, individuals can easily connect, share updates, and engage with a wide audience.
-
-In the ever-evolving landscape of technology, staying informed and adapting to new developments is crucial. Continuous learning and curiosity drive innovation. As we navigate the digital age, understanding the principles of technology and its impact on society becomes increasingly important.
-"""
-slices = generate_slices(input_text)
-
-for i, slice_text in enumerate(slices):
-    print(f"Original Slice {i + 1}:", slice_text)
+    
+if __name__ == "__main__":
+    # Example usage:
+    input_text = """
+    The quick brown fox jumps over the lazy dog. This is a test sentence for the language model. It demonstrates how the program handles short and simple input texts. The goal is to generate meaningful slices that cover the entire input length. Each slice should be diverse enough from the others based on the specified cosine distance threshold.
+    
+    Programming is the art of telling a computer what to do through a set of instructions. It involves logic, problem-solving, and creativity. Writing code allows us to create software that can automate tasks, process data, and perform various functions. Learning to program opens up a world of possibilities in the field of technology.
+    
+    Artificial Intelligence is a rapidly advancing field that aims to create machines capable of intelligent behavior. Machine learning, a subset of AI, enables computers to learn from data and improve their performance over time. Large Language Models, like ChatGPT, are examples of AI applications that can understand and generate human-like text.
+    
+    The internet has transformed the way we access information and communicate. It connects people globally, facilitates online collaboration, and provides a platform for sharing ideas. With the rise of social media, individuals can easily connect, share updates, and engage with a wide audience.
+    
+    In the ever-evolving landscape of technology, staying informed and adapting to new developments is crucial. Continuous learning and curiosity drive innovation. As we navigate the digital age, understanding the principles of technology and its impact on society becomes increasingly important.
+    """
+    slices = generate_slices(input_text)
+    
+    for i, slice_text in enumerate(slices):
+        print(f"Original Slice {i + 1}:", slice_text)
