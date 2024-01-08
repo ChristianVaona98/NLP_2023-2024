@@ -71,3 +71,9 @@ if __name__ == "__main__":
 
 Adjust `user_context_window_size` and `user_slice_threshold` in the __main__ block according to your requirements.
 Ensure the input text is in a format suitable for natural language processing tasks.
+
+## Dependencies
+- Ensure you have the required libraries installed by running:
+  ```bash
+  pip install scikit-learn nltk
+  ```
