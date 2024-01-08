@@ -54,7 +54,7 @@ from nltk.tokenize import word_tokenize
 # ... (Include the provided functions here)
 
 # Example usage:
-input_text = """user input"""
+input_text = """Your input text goes here."""
 
 slices = generate_slices(input_text)
 
