@@ -34,7 +34,7 @@ def are_slices_different_enough(slice1, slice2, slice_threshold):
 
     return distance > slice_threshold
 
-def generate_slices(input_text, context_window_size=128, slice_threshold=0.20):
+def generate_slices(user_input_text, context_window_size=None, slice_threshold=None):
     # Check if input is below the standard size of the context window
     if len(input_text) <= context_window_size:
         return [input_text], [input_text]
@@ -67,8 +67,12 @@ def generate_slices(input_text, context_window_size=128, slice_threshold=0.20):
     return original_slices
     
 if __name__ == "__main__":
+    # Adjustable parameters
+    user_context_window_size = 128  # Change as needed
+    user_slice_threshold = 0.20  # Change as needed
+    
     # Example usage:
-    input_text = """
+    user_input_text = """
     The quick brown fox jumps over the lazy dog. This is a test sentence for the language model. It demonstrates how the program handles short and simple input texts. The goal is to generate meaningful slices that cover the entire input length. Each slice should be diverse enough from the others based on the specified cosine distance threshold.
     
     Programming is the art of telling a computer what to do through a set of instructions. It involves logic, problem-solving, and creativity. Writing code allows us to create software that can automate tasks, process data, and perform various functions. Learning to program opens up a world of possibilities in the field of technology.
@@ -79,7 +83,8 @@ if __name__ == "__main__":
     
     In the ever-evolving landscape of technology, staying informed and adapting to new developments is crucial. Continuous learning and curiosity drive innovation. As we navigate the digital age, understanding the principles of technology and its impact on society becomes increasingly important.
     """
-    slices = generate_slices(input_text)
+    
+    slices = generate_slices(user_input_text, context_window_size=user_context_window_size, slice_threshold=user_slice_threshold)
     
     for i, slice_text in enumerate(slices):
         print(f"Original Slice {i + 1}:", slice_text)
