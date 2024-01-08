@@ -34,7 +34,7 @@ def are_slices_different_enough(slice1, slice2, slice_threshold):
 
     return distance > slice_threshold
 
-def generate_slices(user_input_text, context_window_size=None, slice_threshold=None):
+def generate_slices(input_text, context_window_size=None, slice_threshold=None):
     # Check if input is below the standard size of the context window
     if len(input_text) <= context_window_size:
         return [input_text], [input_text]
