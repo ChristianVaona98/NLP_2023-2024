@@ -54,10 +54,14 @@ from nltk.tokenize import word_tokenize
 # ... (Include the provided functions here)
 
 if __name__ == "__main__":
+    # Adjustable parameters
+    user_context_window_size = 128  # Change as needed
+    user_slice_threshold = 0.20  # Change as needed
+
     # Example usage:
-    input_text = """Your input text goes here."""
+    user_input_text = """Your input text goes here."""
     
-    slices = generate_slices(input_text)
+    slices = generate_slices(user_input_text, context_window_size=user_context_window_size, slice_threshold=user_slice_threshold)
     
     for i, slice_text in enumerate(slices):
         print(f"Original Slice {i + 1}:", slice_text)
@@ -65,5 +69,5 @@ if __name__ == "__main__":
 
 ## Important Notes
 
-Adjust `context_window_size` and `slice_threshold` according to your requirements.
+Adjust `user_context_window_size` and `user_slice_threshold` in the __main__ block according to your requirements.
 Ensure the input text is in a format suitable for natural language processing tasks.
