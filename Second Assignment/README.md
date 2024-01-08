@@ -65,5 +65,5 @@ if __name__ == "__main__":
 
 ## Important Notes
 
-Adjust context_window_size and slice_threshold according to your requirements.
+Adjust `context_window_size` and `slice_threshold` according to your requirements.
 Ensure the input text is in a format suitable for natural language processing tasks.
