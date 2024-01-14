@@ -37,7 +37,7 @@ def are_slices_different_enough(slice1, slice2, slice_threshold):
 def generate_slices(input_text, context_window_size, slice_threshold):
     # Check if input is below the standard size of the context window
     if len(input_text) <= context_window_size:
-        return [input_text], [input_text]
+        return [input_text]
 
     # Tokenize and preprocess input text
     processed_input, original_input = preprocess_text(input_text)
